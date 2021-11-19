@@ -1,5 +1,7 @@
 package successor
 
+import "github.com/Spuxy/BST/data"
+
 func (tree *data.BST) Find(data int) *BSTNode {
 	node := tree.root
 	for node != nil {

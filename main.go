@@ -1,6 +1,9 @@
 package main
 
 import (
+	"fmt"
+
+	DeleteNode "github.com/Spuxy/BST/DeleteNode"
 	PreInPost "github.com/Spuxy/BST/Preorder_Inorder_Postorder"
 	"github.com/Spuxy/BST/data"
 )
@@ -21,9 +24,12 @@ func main() {
 	bst.Insert(19)
 	bst.Insert(15)
 	bst.Insert(14)
-	bst.Insert(5)
-	bst.Insert(7)
+	bst.Insert(3)
 	bst.Insert(6)
+	bst.Insert(9)
+	bst.Insert(8)
+	bst.Insert(7)
+	bst.Insert(4)
 
 	// Binary tree traversal
 	// Preoder --> |root| |left subtree| |right subtree|
@@ -34,4 +40,13 @@ func main() {
 
 	// Postorder --> |left subtree| |right subtree| |root|
 	PreInPost.Postorder(bst)
+
+	// Delete node
+	// Returns new root node
+	// Inclused all three cases
+	//    1) Leaf node
+	//    2) Parent node with one child
+	//    3) Parent node with both childs
+	root = DeleteNode.DeleteNodeInternal(bst.Root, 6)
+	fmt.Println(root)
 }

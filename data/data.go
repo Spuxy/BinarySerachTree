@@ -81,3 +81,14 @@ func (n *BSTNode) IDK() *BSTNode {
 	}
 	return n
 }
+
+func (root *BSTNode) DeleteMin(data int) {
+	root = root.Right
+	for root.Left != nil {
+		if root.Left.Data == data {
+			root.Left = nil
+		} else {
+			root = root.Left
+		}
+	}
+}
