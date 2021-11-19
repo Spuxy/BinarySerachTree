@@ -2,7 +2,7 @@
 - [x] insert <-- Insert value into tree
 - [x] get_node_count <-- Get count of stored nodes
 - [x] print_values <-- Prints the values of nodes in the tree, from min to max
-- [] delete_tree <-- Delete whole tree
+- [ ] delete_tree <-- Delete whole tree
 - [] is_in_tree <-- Returns boolean if given value exists or not in tree
 - [] get_height <-- Returns the height in nodes (single node's height is 1)
 - [] get_min <-- Returns the minimum value stored in the tree
