@@ -1,14 +1,14 @@
 package DeleteNode
 
-import "github.com/Spuxy/BST/data"
+import "github.com/Spuxy/BST/Data"
 
-func DeleteNodeInternal(root *data.BSTNode, data int) *data.BSTNode {
+func delete(root *data.BSTNode, data int) *data.BSTNode {
 	if (*root).Data > data {
 		// Recursion to append to left sub-tree
-		root.Left = DeleteNodeInternal(root.Left, data)
+		root.Left = delete(root.Left, data)
 	} else if (*root).Data < data {
 		// Recursion to append to right sub-tree
-		root.Right = DeleteNodeInternal(root.Right, data)
+		root.Right = delete(root.Right, data)
 	} else {
 		// case 1: leaf node
 		if root.Left == nil && root.Right == nil {
@@ -27,8 +27,11 @@ func DeleteNodeInternal(root *data.BSTNode, data int) *data.BSTNode {
 		tmpNode.DeleteMin(tmpNode.Data)
 		return tmpNode
 	}
-
 	return root
+}
+func DeleteNodeInternal(bst *data.BST, data int) *data.BSTNode {
+	bst.Size--
+	return delete(bst.Root, data)
 }
 
 func findMin(root *data.BSTNode) *data.BSTNode {

@@ -8,11 +8,11 @@ type BSTNode struct {
 
 type BST struct {
 	Root *BSTNode
-	size int
+	Size int
 }
 
-func (b *BST) Size() int {
-	return b.size
+func (b *BST) GetSize() int {
+	return b.Size
 }
 
 func NewNode(data int) *BSTNode {
@@ -22,7 +22,7 @@ func NewNode(data int) *BSTNode {
 }
 
 func NewBST(root *BSTNode) *BST {
-	return &BST{Root: root, size: 0}
+	return &BST{Root: root, Size: 0}
 }
 
 func (node *BSTNode) insert(newNode *BSTNode) {
@@ -45,7 +45,7 @@ func (tree *BST) Insert(data int) {
 	if tree == nil {
 		tree.Root = &BSTNode{}
 	}
-	tree.size++
+	tree.Size++
 	tree.Root.insert(&BSTNode{Data: data, Left: nil, Right: nil})
 
 }

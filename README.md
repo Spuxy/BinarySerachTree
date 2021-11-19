@@ -1,7 +1,12 @@
-### Done
-* Delete
-* Insert
-* Traversal
-
-### Remaining
-* Check if it is BST
+### Implementation
+- [x] insert <-- Insert value into tree
+- [x] get_node_count <-- Get count of stored nodes
+- [x] print_values <-- Prints the values of nodes in the tree, from min to max
+- [] delete_tree <-- Delete whole tree
+- [] is_in_tree <-- Returns boolean if given value exists or not in tree
+- [] get_height <-- Returns the height in nodes (single node's height is 1)
+- [] get_min <-- Returns the minimum value stored in the tree
+- [] get_max <-- Returns the maximum value stored in the tree
+- [] is_binary_search_tree <-- Return boolean if its BST
+- [x] delete_value <-- Delete node by given node
+- [] get_successor <-- Returns next-highest value in tree after given value, -1 if none

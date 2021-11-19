@@ -3,7 +3,7 @@ package PreInPost
 import (
 	"fmt"
 
-	"github.com/Spuxy/BST/data"
+	"github.com/Spuxy/BST/Data"
 )
 
 func Preorder(tree *data.BST) {

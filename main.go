@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 
+	Check "github.com/Spuxy/BST/Check"
+	"github.com/Spuxy/BST/Data"
 	DeleteNode "github.com/Spuxy/BST/DeleteNode"
 	PreInPost "github.com/Spuxy/BST/Preorder_Inorder_Postorder"
-	"github.com/Spuxy/BST/data"
 )
 
 func main() {
@@ -47,6 +48,8 @@ func main() {
 	//    1) Leaf node
 	//    2) Parent node with one child
 	//    3) Parent node with both childs
-	root = DeleteNode.DeleteNodeInternal(bst.Root, 6)
-	fmt.Println(root)
+	root = DeleteNode.DeleteNodeInternal(bst, 6)
+	fmt.Println(bst.GetSize())
+	bool := Check.IsBST(root)
+	fmt.Println(bool)
 }
