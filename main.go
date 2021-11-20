@@ -6,7 +6,9 @@ import (
 	Check "github.com/Spuxy/BST/Check"
 	data "github.com/Spuxy/BST/Data"
 	"github.com/Spuxy/BST/DeleteNode"
+	"github.com/Spuxy/BST/Height"
 	"github.com/Spuxy/BST/LevelOrder"
+	"github.com/Spuxy/BST/MinMax"
 	PreInPost "github.com/Spuxy/BST/Preorder_Inorder_Postorder"
 )
 
@@ -58,4 +60,12 @@ func main() {
 	fmt.Println("IS IT BST? ===> ", bool)
 
 	LevelOrder.GetLevelOrder(root)
+
+	rsltInt := Height.Height(root)
+	fmt.Println(rsltInt)
+
+	min := MinMax.GetMin(root)
+	fmt.Println(min, "das")
+	max := MinMax.GetMax(root)
+	fmt.Println(max, "das2")
 }
